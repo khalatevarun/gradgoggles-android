@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#042F66</color>
+    <color name="colorPrimaryDark">#042F66</color>
+    <color name="colorAccent">#5A6072</color>
+
+
+    <!-- Color Palette -->
+    <color name="Primary">#042F66</color>
+    <color name="Secondary">#3CAEA3</color>
+    <color name="Tertiary">#A4303F</color>
+
+
+    <color name = "subtle_text">#AFAFAF</color>
+    <color name = "white">#FFFFFF</color>
+</resources>

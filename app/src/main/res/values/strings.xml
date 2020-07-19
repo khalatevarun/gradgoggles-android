@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">2020</string>
+    <string name="err_name">The name field is required.</string>
+    <string name="err_email">The email must be a valid email address.</string>
+    <string name="err_password">The password must be at least 6 characters.</string>
+
+    <string-array name="department_array">
+       <item>Computer</item>
+        <item>IT</item>
+        <item>Elex</item>
+        <item>Mechanical</item>
+        <item>Production</item>
+        <item>Chemical</item>
+        <item>Industrial</item>
+        <item>Instrumentation</item>
+    </string-array>
+
+
+
+</resources>
