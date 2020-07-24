@@ -6,7 +6,7 @@ public class AccessToken {
    @Json(name="name")
    String name;
 
-   @Json(name = "access_Token")
+   @Json(name = "access_token")
    String accessToken;
 
 
@@ -17,21 +17,24 @@ public class AccessToken {
    @Json(name="error")
    String errorMessage;
 
-   public void setErrorMessage(String errorMessage)
-   {
-      this.errorMessage=errorMessage;
-   }
+   @Json(name="msg")
+   String msg;
+
 
    public  String getErrorMessage(){
       return errorMessage;
    }
 
+   public String getMsg(){
+      return msg;
+   }
    public String getAccessToken(){
       return accessToken;
 
    }
 
    public String getRefreshToken(){
+
       return refreshToken;
    }
 
@@ -41,6 +44,7 @@ public class AccessToken {
    public void setAccessToken(String accessToken) {
       this.accessToken = accessToken;
    }
+
 
    public void setRefreshToken(String refreshToken) {
       this.refreshToken = refreshToken;

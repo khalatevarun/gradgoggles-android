@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    >
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/login_background"
+
+        android:scaleType="centerCrop"/>
+
+
+    <ImageView
+        android:id="@+id/gradient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gradient"
+        android:scaleType="matrix"
+
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/signUp3_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:text="Your Profile"
+        android:textSize="40dp"
+        android:textColor="#FFFF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <View
+        android:id="@+id/underline"
+        android:layout_width="110dp"
+        android:layout_height="3dp"
+        android:layout_below="@+id/signUp3_text"
+        android:layout_marginLeft="40dp"
+        android:background="#477AD5"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/signUp_pic"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true">
+
+        </ImageView>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signUp_quote"
+            android:layout_below="@+id/signUp_pic"
+            android:theme="@style/myTextInputLabel"
+            android:layout_margin="20dp">
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Quote"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:textSize="24dp"
+                android:drawableTop="@drawable/quote_icon"
+                android:drawablePadding="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

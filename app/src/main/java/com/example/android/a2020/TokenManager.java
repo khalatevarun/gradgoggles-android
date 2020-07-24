@@ -10,6 +10,7 @@ public class TokenManager {
     private SharedPreferences.Editor editor;
 
     private static TokenManager INSTANCE = null;
+    String atoken;
 
     private TokenManager (SharedPreferences prefs){
         this.prefs=prefs;
@@ -39,6 +40,10 @@ public class TokenManager {
         token.setAccessToken(prefs.getString("ACCESS_TOKEN", null));
         token.setRefreshToken(prefs.getString("REFRESH_TOKEN", null));
         return token;
+    }
+    public String getAccess(){
+        AccessToken token = new AccessToken();
+        return prefs.getString("ACCESS_TOKEN",null);
     }
 
 }

@@ -7,7 +7,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="myTextInputLabel" parent="TextAppearance.AppCompat">
+    <style name="myTextInputLabel" parent="Widget.Design.TextInputLayout">
         <!-- Customize your theme here. -->
         <item name="android:textColorHint">@color/subtle_text</item>
         <item name="android:textSize">24sp</item>
@@ -22,6 +22,19 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="bgSplashScreenStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+
+
+    <!-- Theme.AppCompat.Light.Dialog -->
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/Secondary</item>
     </style>
 
 </resources>

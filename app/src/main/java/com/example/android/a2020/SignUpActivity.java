@@ -2,16 +2,15 @@ package com.example.android.a2020;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
+import android.animation.AnimatorInflater;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.os.Bundle;
 
 import android.content.Intent;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,14 +34,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static android.util.Patterns.*;
-import static com.basgeekball.awesomevalidation.utility.RegexTemplate.*;
+
+public class SignUpActivity extends AppCompatActivity  {
 
 
-public class SignUpActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
-    //Create Spinner
-    private Spinner mSpinner;
 
     private static final String TAG = "SignUpActivity";
 
@@ -69,21 +64,7 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        //find spinner's view
-        mSpinner = (Spinner) findViewById(R.id.department_spinner);
-        //add on item selected listerners to spinner
-        mSpinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
-        //create adapter
-        ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(this,
-                        R.array.department_array,
-                        android.R.layout.simple_spinner_item);
 
-        //how the spinner will look when it drop downs on click
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        //setting adapter to spinner
-        mSpinner.setAdapter(adapter);
 
 
 
@@ -102,6 +83,22 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
 
         }
         **/
+
+        TextView signUpText = (TextView) findViewById(R.id.signUp_text);
+
+        // Initialize a new ObjectAnimator
+        ObjectAnimator fadeIn = ObjectAnimator.ofFloat(signUpText, "alpha",  0.2f, 1f);
+        fadeIn.setDuration(1000);
+
+        ObjectAnimator textViewAnimator = (ObjectAnimator) AnimatorInflater.loadAnimator(SignUpActivity.this, R.animator.slideup_welcome);
+        textViewAnimator.setTarget(signUpText);
+
+        AnimatorSet animatorSet=new AnimatorSet();
+        animatorSet.playTogether(fadeIn,textViewAnimator);
+        animatorSet.start();
+
+
+
         TextView redirect_to_login = (TextView)findViewById(R.id.redirect_to_login);
         // Set a click listener on that View
 
@@ -120,25 +117,13 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
             }
         });
     }
-    //Do something when the item is selected
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-        //getting label name of the selected spinner
-        String department = adapterView.getItemAtPosition(i).toString();
-
-
-    }
-
-    //may keep blank
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-    }
 
 
 
 
-    @OnClick(R.id.signUp_button)
+
+
+    @OnClick(R.id.signUp1_button)
       void signUp() {
           String fullname = signUp_fullname.getEditText().getText().toString();
           String email = signUp_email.getEditText().getText().toString();
@@ -153,6 +138,10 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
           if (validator.validate()) {
               call = userClient.register(email, fullname, password);
 
+
+
+
+
               call.enqueue(new Callback<AccessToken>() {
                   @Override
                   public void onResponse(Call<AccessToken> call, Response<AccessToken> response) {
@@ -163,14 +152,14 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                           Log.w(TAG, "onResponse: " + response.body());
 
 
-                            String responseMessage = response.body().getErrorMessage().toString();
+                            String responseMessage = response.body().getErrorMessage();
                             if(responseMessage.equals("User already exists")) {
                                 Toast.makeText(SignUpActivity.this, "User already exists", Toast.LENGTH_SHORT).show();
                             }
                             else {
 
                                 tokenManager.saveToken(response.body());
-                                startActivity(new Intent(SignUpActivity.this, WelcomeActivity.class));
+                                startActivity(new Intent(SignUpActivity.this, SignUp2Activity.class));
                                 finish();
                             }
 
@@ -189,6 +178,7 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
 
                   @Override
                   public void onFailure(Call<AccessToken> call, Throwable t) {
+
                       Log.w(TAG, "onFailure: " + t.getMessage());
                   }
               });
