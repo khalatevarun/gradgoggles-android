@@ -1,0 +1,193 @@
+package com.team.gradgoggles.android;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.team.gradgoggles.android.api.model.AccessToken;
+import com.google.android.material.navigation.NavigationView;
+import com.squareup.picasso.Picasso;
+
+import java.util.Calendar;
+
+import jp.wasabeef.picasso.transformations.CropCircleTransformation;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    private DrawerLayout drawerLayout;
+    String time;
+    String userName;
+    AccessToken info= new AccessToken();
+    TokenManager tokenManager;
+    static int prevFrag =0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+        Toolbar toolbar = findViewById(R.id.frag_toolbar);
+        setSupportActionBar(toolbar);
+
+        drawerLayout = findViewById(R.id.frag_drawer_layout);
+        NavigationView navigationView = findViewById(R.id.frag_nav_view);
+
+
+
+        tokenManager = TokenManager.getInstance(getSharedPreferences("prefs", MODE_PRIVATE));
+
+        if(tokenManager.getis2020().equals("no")){
+            navigationView.getMenu().findItem(R.id.nav_scrap).setVisible(false);
+        }
+
+        userName = tokenManager.getName();
+        Calendar c = Calendar.getInstance();
+
+        int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
+
+        if(timeOfDay >= 0 && timeOfDay < 12){
+time = "Good Morning, "  ;      }else if(timeOfDay >= 12 && timeOfDay < 16){
+time = "Good Afternoon, "  ;      }else if(timeOfDay >= 16 && timeOfDay < 21){
+time = "Good Evening, "   ;     }else if(timeOfDay >= 21 && timeOfDay < 24){
+time = "Good Night, ";        }
+
+        View headerView = navigationView.getHeaderView(0);
+        TextView navUsername = (TextView)headerView.findViewById(R.id.good);
+        navUsername.setText(time+userName);
+
+        ImageView navUserImage = (ImageView)headerView.findViewById(R.id.nav_user_pic);
+        Picasso.get().load(tokenManager.getPhoto()).transform(new CropCircleTransformation()).placeholder(R.drawable.gcaps_nav).into(navUserImage);
+
+
+        navigationView.setNavigationItemSelectedListener(this);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        if(prevFrag==2){
+            getSupportFragmentManager().beginTransaction().replace(R.id.frag_fragment_container, new ProfileFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_profile);
+            getSupportActionBar().setTitle("GradGoggles");
+            prevFrag=0;
+
+        }
+
+        else if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.frag_fragment_container, new YearbookFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_yearbook);
+            getSupportActionBar().setTitle("");
+        }
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else
+        {
+
+        super.onBackPressed();
+
+    }
+}
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()){
+
+            case R.id.nav_home:
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag_fragment_container,new HomeMain()).commit();
+                getSupportActionBar().setTitle("GradGoggles");
+                break;
+            case R.id.nav_yearbook:
+                Globals g= Globals.getInstance();
+                g.setSearchByName(false);
+                g.setSearchByDept(false);
+                g.setSearchByYearbook(true);
+                g.setCurrentYearbookPage(1);
+                g.setCurrentDeptPage(1);
+                g.setCurrentNamePage(1);
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag_fragment_container,new YearbookFragment()).commit();
+                getSupportActionBar().setTitle("");
+
+                break;
+            case R.id.nav_team:
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag_fragment_container, new TeamFragment()).commit();
+                getSupportActionBar().setTitle("Team");
+
+                break;
+            case R.id.nav_profile:
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag_fragment_container, new ProfileFragment()).commit();
+                getSupportActionBar().setTitle("Profile");
+
+                break;
+            case R.id.nav_scrap:
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag_fragment_container, new ScrapFragment()).commit();
+                getSupportActionBar().setTitle("My Scraps");
+
+                break;
+
+            case R.id.nav_logout:
+
+                AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+                dialog.setMessage("Are you sure you want to log out of your account?");
+                dialog.setTitle("Log Out?");
+                dialog.setPositiveButton("YES",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,
+                                                int which) {
+                                tokenManager.deleteToken();
+                                Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+                                startActivity(loginIntent);
+                                finish();
+
+                            }
+                        });
+                dialog.setNegativeButton("NO",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alertDialog=dialog.create();
+                alertDialog.show();
+
+
+                break;
+            case R.id.nav_share:
+
+
+                Intent intent =new Intent();
+                intent.setAction(Intent.ACTION_SEND);
+                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "GragGoggles");
+                intent.putExtra(Intent.EXTRA_TEXT," ");
+                intent.setType("text/plain");
+                startActivity(intent);
+                break;
+
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+
+
+
+
+        return true;
+    }
+
+}

@@ -1,17 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+  >
 
-   <TextView
-       android:layout_width="wrap_content"
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+      android:src="@drawable/cyan_overlay"
+      android:alpha="1"/>
+
+   <com.google.android.material.card.MaterialCardView
+       android:layout_width="250dp"
+       android:layout_height="250dp"
+       app:cardCornerRadius="425dp"
+       app:cardBackgroundColor="#8acec8"
+       app:strokeWidth="@android:dimen/app_icon_size"
+       app:cardElevation="30dp"
+       android:layout_marginTop="170dp"
+       android:layout_centerHorizontal="true">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+
+           android:orientation="vertical">
+
+           <ImageView
+               android:layout_width="85dp"
+               android:layout_height="85dp"
+               android:layout_gravity="center"
+              android:layout_marginTop="10dp"
+               android:id="@+id/logo"
+               android:src="@drawable/app_logo_without_background"/>
+
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="GradGoggles"
+               android:layout_marginTop="10dp"
+               android:textColor="@color/Primary"
+               android:fontFamily="@font/source_sans_pro_semibold"
+               android:textSize="26dp"
+               android:id="@+id/name"
+               android:layout_gravity="center"/>
+
+
+
+       </LinearLayout>
+
+
+   </com.google.android.material.card.MaterialCardView>
+    <TextView
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:text="Hello Madarchox!"
-       android:layout_centerInParent="true"
-       android:textSize="56dp"
+       android:text="#CLASSOF2020"
+       android:layout_alignParentBottom="true"
+
+
+
+       android:textSize="42dp"
        android:gravity="center"
-       android:textColor="@color/Secondary"
+       android:textStyle="bold"
+       android:fontFamily="@font/source_sans_pro_semibold"
+
+       android:textColor="@color/white"
+       android:layout_marginBottom="135dp"
        />
 
 

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeMain">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:background="@color/white"
+       >
+
+       <ImageView
+           android:layout_width="100dp"
+           android:layout_height="120dp"
+           android:src="@drawable/app_icon_without_shadow"
+           android:layout_marginTop="10dp"
+           android:layout_gravity="center"/>
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="36sp"
+           android:text="#CLASSOF2020"
+           android:layout_margin="15dp"
+           android:textFontWeight="600"
+           android:id="@+id/classof2020"
+
+           android:gravity="center"
+           android:fontFamily="@font/source_sans_pro_semibold"
+
+           android:textColor="@color/Primary"/>
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="From Kenny to Corona, this batch has seen it all. As we graduate in these uncertain times, let's reflect back on the four years that gave us so much. Let's celebrate all the fun times, all the events, all the submissions, all the love, joy and even frustration, and every unique thing that is straight out of 666 Upper Indira Nagar.
+
+Graduation Goggles is a small attempt to give you the experience of a Yearbook and a Virtual Scribble Day."
+           android:layout_margin="15dp"
+           android:fontFamily="@font/source_sans_pro_semibold"
+           android:textAppearance="@style/TextAppearance.AppCompat"
+           android:textSize="18dp"
+           android:id="@+id/mainText"
+           android:textColor="@color/black"
+
+           />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="YOUR JOURNEY"
+           android:layout_margin="15dp"
+           android:textSize="20sp"
+           android:textFontWeight="600"
+
+           android:textColor="@color/black"
+           android:fontFamily="@font/source_sans_pro_semibold"/>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="@color/Primary"
+           android:textSize="20sp"
+           android:id="@+id/countSeconds"
+           android:text="121212 SECONDS"
+           android:layout_margin="15dp"
+           android:textFontWeight="600"
+           android:fontFamily="@font/source_sans_pro_semibold"/>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="2dp"
+           android:background="@color/Primary"
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+           />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="@color/Primary"
+           android:textSize="20sp"
+           android:text="400+ SUBMISSIONS"
+           android:layout_margin="15dp"
+           android:textFontWeight="600"
+           android:fontFamily="@font/source_sans_pro_semibold"/>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="2dp"
+           android:background="@color/Primary"
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+           />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="@color/Primary"
+           android:textSize="20sp"
+           android:text="30+ FESTIVALS"
+           android:layout_margin="15dp"
+           android:textFontWeight="600"
+           android:fontFamily="@font/source_sans_pro_semibold"/>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="2dp"
+           android:background="@color/Primary"
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+           />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="@color/Primary"
+           android:textSize="20sp"
+           android:text="∞   MEMORIES"
+           android:layout_margin="15dp"
+           android:textFontWeight="600"
+           android:fontFamily="@font/source_sans_pro_semibold"/>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="2dp"
+           android:background="@color/Primary"
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+           />
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="350dp"
+           android:layout_marginTop="20dp">
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:src="@drawable/ahome_bkg"
+           android:scaleType="centerCrop"
+           android:id="@+id/mainImage"
+          />
+
+
+
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:alpha="0.5"
+               android:src="@drawable/black_overlay"/>
+           <TextView
+               android:id="@+id/message"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:text="LEAVE ONLY FOOTPRINTS"
+               android:layout_margin="20dp"
+               android:textColor="@color/white"
+               android:textSize="20sp"
+               android:fontFamily="@font/source_sans_pro_semibold"
+               android:textStyle="bold"/>
+       </RelativeLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <LinearLayout
+               android:id="@+id/aHome"
+               android:layout_width="0dp"
+               android:layout_height="150dp"
+               android:orientation="vertical"
+               android:background="@color/white"
+               android:layout_weight="1">
+               <TextView
+                   android:id="@+id/tHome"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:text="A HOME"
+                   android:layout_margin="8dp"
+                   android:fontFamily="@font/source_sans_pro_semibold"
+                   android:textStyle="bold"
+
+                   android:textColor="@color/Primary"/>
+
+           <ImageView
+               android:layout_width="85dp"
+               android:layout_height="85dp"
+               android:layout_margin="8dp"
+               android:src="@drawable/a_home"
+               android:layout_gravity="center"
+               />
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/aHangout"
+               android:layout_width="0dp"
+               android:layout_height="150dp"
+               android:orientation="vertical"
+               android:background="@color/Primary"
+               android:layout_weight="1">
+               <TextView
+                   android:id="@+id/tHangout"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:text="A HANGOUT"
+                   android:layout_margin="8dp"
+                   android:fontFamily="@font/source_sans_pro_semibold"
+                   android:textStyle="bold"
+                   android:textColor="@color/white"/>
+
+               <ImageView
+                   android:layout_width="85dp"
+                   android:layout_height="85dp"
+                   android:layout_margin="8dp"
+                   android:layout_gravity="center"
+                   android:src="@drawable/a_hangout"
+
+                   />
+           </LinearLayout>
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <LinearLayout
+               android:id="@+id/aStory"
+               android:layout_width="0dp"
+               android:layout_height="150dp"
+               android:background="@color/Primary"
+
+               android:orientation="vertical"
+               android:layout_weight="1">
+               <TextView
+                   android:id="@+id/tStory"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:text="A STORY"
+                   android:layout_margin="8dp"
+                   android:fontFamily="@font/source_sans_pro_semibold"
+                   android:textStyle="bold"
+                   android:textColor="@color/white"/>
+
+               <ImageView
+                   android:layout_width="85dp"
+                   android:layout_height="85dp"
+                   android:layout_margin="8dp"
+                   android:src="@drawable/a_story"
+                   android:layout_gravity="center"
+                   />
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/aFeeling"
+               android:layout_width="0dp"
+               android:layout_height="150dp"
+               android:orientation="vertical"
+               android:background="@color/Primary"
+
+               android:layout_weight="1">
+               <TextView
+                   android:id="@+id/tFeeling"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:text="A FEELING"
+                   android:layout_margin="8dp"
+                   android:fontFamily="@font/source_sans_pro_semibold"
+                   android:textStyle="bold"
+                   android:textColor="@color/white"/>
+
+               <ImageView
+                   android:layout_width="85dp"
+                   android:layout_height="85dp"
+                   android:layout_margin="8dp"
+                   android:src = "@drawable/a_feeling"
+                   android:layout_gravity="center"
+                   />
+           </LinearLayout>
+
+       </LinearLayout>
+
+
+
+   </LinearLayout>
+    </ScrollView>
+</FrameLayout>

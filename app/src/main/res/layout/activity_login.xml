@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -108,6 +107,31 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <LinearLayout
+            android:id="@+id/forgot_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password? "
+            android:textColor="@color/subtle_text"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:textSize="16sp"
+          />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get help signing in."
+                android:textColor="@color/white"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
 
 
 
@@ -121,7 +145,7 @@
         android:layout_marginBottom="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
-        <Button
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/login_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -129,22 +153,50 @@
             android:textAllCaps="false"
             android:clickable="true"
             android:fontFamily="@font/source_sans_pro_semibold"
-
+            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_margin="20dp"
             android:textSize="22dp"
+            app:initialCornerAngle="50dp"
+
             android:textColor="#FFFF"
             android:background="@drawable/round_button"
+            app:spinning_bar_width="3dp"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_padding="6dp"
+
+
             />
 
-        <TextView
+        <LinearLayout
             android:id="@+id/redirect_to_signup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Don't have an account? SignUp."
-            android:fontFamily="@font/source_sans_pro_extralight"
-            android:textColor="#FFFF"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wanna celebrate the class of 2020? "
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:textColor="@color/subtle_text"
             android:textSize="16sp"
-            android:gravity="center_horizontal"/>
+            />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up."
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                />
+
+
+
+        </LinearLayout>
     </LinearLayout>
 
 

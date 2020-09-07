@@ -145,7 +145,7 @@
 
 
 
-        <Button
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/signUp1_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -153,17 +153,52 @@
             android:textAllCaps="false"
             android:clickable="true"
             android:fontFamily="@font/source_sans_pro_semibold"
+            android:layout_gravity="center"
+            android:gravity="center"
 
             android:layout_margin="20dp"
             android:textSize="22dp"
+            app:initialCornerAngle="50dp"
+
             android:textColor="#FFFF"
             android:background="@drawable/round_button"
+            app:spinning_bar_width="3dp"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_padding="6dp"
             />
 
 
+        <LinearLayout
+            android:id="@+id/redirect_to_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? "
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textColor="@color/subtle_text"
+                android:textSize="16sp"
+                />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login."
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                />
 
 
-        <TextView
+
+        </LinearLayout>
+
+       <!-- <TextView
             android:id="@+id/redirect_to_login"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -173,6 +208,7 @@
             android:text="Already have an account? Login."
             android:textSize="16sp"
             android:gravity="center_horizontal"/>
+            -->
     </LinearLayout>
 
 

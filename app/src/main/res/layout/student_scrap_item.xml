@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+
+
+
+
+    <ImageView
+
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/scrap_user_pic"
+
+
+        android:src="@drawable/shaggy"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sagnik Sen Sharma"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:textSize="14dp"
+        android:id="@+id/scrap_user_name"
+        android:layout_toRightOf="@+id/scrap_user_pic"/>
+    <TextView
+
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textColor="@color/subtle_text"
+        android:text="5 days ago"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:gravity="center_vertical"
+        android:textSize="12dp"
+        android:layout_toRightOf="@+id/scrap_user_name"
+        android:id="@+id/scrap_time_stamp"/>
+
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/scrap_user_pic"
+        android:layout_below="@+id/scrap_user_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/scrap_text_round_bg"
+        android:textSize="14dp"
+        android:id="@+id/scrap_content"
+
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+        android:fontFamily="@font/source_sans_pro_semibold"/>
+
+
+
+
+
+
+</RelativeLayout>

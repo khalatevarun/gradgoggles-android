@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    >
+
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/login_background"
+
+        android:scaleType="centerCrop"/>
+
+
+    <ImageView
+        android:id="@+id/gradient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gradient"
+        android:scaleType="matrix"
+
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:text="Forgot Password?"
+        android:textSize="40dp"
+        android:textColor="#FFFF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="3dp"
+        android:layout_below="@+id/forgot_password"
+        android:layout_marginLeft="40dp"
+        android:background="#477AD5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+
+
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No worries, happens to all of us. We'll hook you up with a new one in no time. Drop your email here."
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:layout_margin="20dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgot_email"
+            android:theme="@style/myTextInputLabel"
+            android:layout_margin="20dp">
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:textSize="24dp"
+
+                android:drawableLeft="@drawable/email_icon"
+                android:drawablePadding="15dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/send_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send mail"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:textSize="22dp"
+            android:background="@drawable/round_button"
+            app:initialCornerAngle="50dp"
+
+
+            android:textColor="#FFFF"
+            app:spinning_bar_width="3dp"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_padding="6dp"
+
+
+            />
+
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
+
+
+
+
+

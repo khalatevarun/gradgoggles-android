@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">2020</string>
+    <string name="app_name">GradGoggles</string>
     <string name="err_name">The username field is required.</string>
     <string name="err_email">Enter a valid email address.</string>
     <string name="err_password">The password must be at least 6 characters.</string>
@@ -16,6 +16,24 @@
         <item>Industrial</item>
         <item>Instrumentation</item>
     </string-array>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+
+
+    <string-array name="Screens">
+        <item>Home</item>
+        <item>Team</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string name="signup"><font fgcolor='#FFFF'>Sign Up.</font></string>
+    <string name="login"><font fgcolor='#FFFF'>Login.</font></string>
+    <string name="title_activity_student">Student</string>
+    <string name="tab_text_2">Tab 2</string>
 
 
 </resources>

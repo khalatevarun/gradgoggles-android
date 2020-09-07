@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#042F66</color>
+        <color name="colorPrimary">#042F66</color>
     <color name="colorPrimaryDark">#042F66</color>
     <color name="colorAccent">#5A6072</color>
 
@@ -11,7 +11,7 @@
     <color name="Tertiary">#A4303F</color>
 
 
-    <color name = "subtle_text">#afabab</color>
+    <color name = "subtle_text">#d3d1d1</color>
     <color name = "white">#FFFFFF</color>
 
     <color name="colorSplashScreenBG">#042F66</color>

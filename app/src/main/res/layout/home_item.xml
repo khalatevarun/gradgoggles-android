@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/home_item_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="170dp"
+         android:layout_centerInParent="true"
+         android:background="@color/Secondary">
+     <com.google.android.material.card.MaterialCardView
+         android:layout_width="100dp"
+         android:layout_height="100dp"
+         app:cardCornerRadius="100dp"
+         android:layout_centerInParent="true"
+
+         android:id="@+id/profile">
+         -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+
+        >
+
+
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:id="@+id/item_pic"
+                android:layout_centerHorizontal="true"
+
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/shaggy"
+                />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/item_pic"
+            android:id="@+id/item_id"
+            android:textColor="#B1DFDA"/>
+    </RelativeLayout>
+    <!--  </com.google.android.material.card.MaterialCardView>
+   </RelativeLayout>-->
+
+
+
+     <TextView
+         android:id="@+id/item_name"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Varun Khalate"
+         android:layout_marginTop="0dp"
+         android:textStyle="bold"
+         android:layout_marginLeft="8dp"
+         android:layout_marginRight="8dp"
+
+
+         android:textSize="16dp"
+         android:fontFamily="@font/source_sans_pro_semibold"
+         android:textColor="@color/black"
+         android:maxLines="1"
+         android:ellipsize="end"
+         android:gravity="center"/>
+
+     <TextView
+         android:id="@+id/item_department"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="0dp"
+         android:text="Computer Engineering"
+         android:gravity="center"
+         android:textSize="14dp"
+
+         android:textColor="@color/black"
+         android:fontFamily="@font/source_sans_pro_semibold"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_quote5"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+
+
+        android:orientation="vertical">
+
+     <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="20dp"
+
+         android:layout_gravity="center"
+         android:src="@drawable/quote_icon"
+         android:tint="@color/Secondary"/>
+
+     <TextView
+         android:id="@+id/item_quote"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius molestie faucibus. Ut maximus justo at mi dictum venenatis. Vestibulum eget varius erat, luctus efficitur odio. Aliquam vitae gravida libero. Donec ante quam, pretium vitae convallis ac, euismod vel mi. Etiam sit amet erat gravida, pretium sem a, imperdiet ipsum."
+         android:textSize="14dp"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         android:layout_marginBottom="10dp"
+         android:textColor="@color/black"
+         android:fontFamily="@font/source_sans_pro_extralight"
+         android:textAlignment="center"
+
+
+         android:maxLines="2"
+         android:ellipsize="end"
+         android:textStyle="italic"
+         android:gravity="center"
+         android:layout_gravity="center" />
+    </LinearLayout>
+
+
+
+
+ </LinearLayout>

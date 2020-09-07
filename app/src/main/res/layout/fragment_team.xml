@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".TeamFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/black_overlay"
+            android:alpha="1"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/collg_background2"
+            android:scaleType="centerCrop"
+            android:alpha="0.2"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:text="Dear Class Of 2020,"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="36dp"
+
+
+                />
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:text="Back in January, we were all looking forward to a Mèlange, dressing up at Vishwotsav, and most importantly a farewell and a scribble day. Grad Goggles started as a desire to live that, to sum up four years in one thing and dedicate it to VIT, and the amazing people I met here. This goodbye can't be put into words, but don't let a pandemic stop you from expressing the meaning of this four year journey. We hope Grad Goggles will help you in the smallest way it can, to have a memorable conclusion to college. Upper Zila Jhalach Pahije!"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="20dp"
+
+                android:lineHeight="30dp"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:text="Love and Warm Wishes,\nSagnik &amp; Team Grad Goggles"
+                android:textSize="20dp"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            <RelativeLayout
+                android:layout_marginTop="150dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    >
+
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/shaggy"
+                        android:scaleType="centerCrop"/>
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sagnik Sen Sharma"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:fontFamily="@font/source_sans_pro_extralight"
+
+
+                android:gravity="center"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Dev Lead"
+                android:textSize="18dp"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="150dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    >
+
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/rajendra"
+                        android:scaleType="centerCrop"/>
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Raj Rajhans"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+
+                android:textStyle="italic"
+                android:fontFamily="@font/source_sans_pro_extralight"
+
+
+                android:gravity="center"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Dev Lead"
+                android:textSize="18dp"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="150dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+
+
+                    app:cardCornerRadius="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    >
+
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pp"
+                        android:scaleType="centerCrop"/>
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Varun Khalate"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:fontFamily="@font/source_sans_pro_extralight"
+
+
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Dev Lead"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="150dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+
+
+
+                    app:cardCornerRadius="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    >
+
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/swaraz"
+                        android:scaleType="centerCrop"/>
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Swaraj Thamke"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/source_sans_pro_extralight"
+                android:textStyle="italic"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Design Lead"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="150dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    >
+
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/jlo"
+                        android:scaleType="centerCrop"/>
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Jatan Loya"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:fontFamily="@font/source_sans_pro_extralight"
+
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Support Design"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:gravity="center"/>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="150dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    >
+
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/deboshree"
+                        android:scaleType="centerCrop"/>
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Deboshree Roy"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:fontFamily="@font/source_sans_pro_extralight"
+
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Support Lead"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:gravity="center"/>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="150dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+
+
+
+                    app:cardCornerRadius="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    >
+
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/patil"
+                        android:scaleType="centerCrop"/>
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Siddhesh Patil"
+                android:textColor="@color/white"
+
+
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:fontFamily="@font/source_sans_pro_extralight"
+
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Support Lead"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    </RelativeLayout>
+
+</FrameLayout>

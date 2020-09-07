@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/container"
+
     android:layout_height="match_parent"
     tools:context=".SignUp2Activity">
 
@@ -143,10 +145,19 @@
 
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
 
 
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
 
-        <Button
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/signUp2_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -154,15 +165,22 @@
             android:textAllCaps="false"
             android:clickable="true"
             android:fontFamily="@font/source_sans_pro_semibold"
+        android:layout_gravity="center"
+        android:gravity="center"
 
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="90dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
+        app:initialCornerAngle="50dp"
+
+
+        android:layout_margin="20dp"
             android:textSize="22dp"
             android:textColor="#FFFF"
             android:background="@drawable/round_button"
+        app:spinning_bar_width="3dp"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp"
             />
+    </LinearLayout>
 
 
 

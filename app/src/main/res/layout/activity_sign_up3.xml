@@ -35,7 +35,7 @@
         android:fontFamily="@font/source_sans_pro_semibold"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="50dp"
-        android:text="Your Profile"
+        android:text="Get On Board!"
         android:textSize="40dp"
         android:textColor="#FFFF"
         android:layout_alignParentTop="true"
@@ -56,40 +56,93 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
-
-        <ImageView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:id="@+id/signUp_pic"
+            app:cardCornerRadius="200dp"
+            android:layout_centerInParent="true"
             android:layout_alignParentTop="true"
-            android:layout_centerInParent="true">
+            android:id="@+id/profile">
 
-        </ImageView>
+       <ImageView
+           android:id="@+id/signUp_pic"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:src="@drawable/empty_profile"
+           android:scaleType="centerCrop"/>
+        </com.google.android.material.card.MaterialCardView>
 
 
 
-        <com.google.android.material.textfield.TextInputLayout
+
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/signUp_quote"
-            android:layout_below="@+id/signUp_pic"
+            android:layout_below="@+id/profile"
             android:theme="@style/myTextInputLabel"
-            android:layout_margin="20dp">
-            <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:textSize="24dp"
+            android:hint="Quote"
+            android:drawableTop="@drawable/quote_icon"
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Quote"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:inputType="textEmailAddress"
-                android:textSize="24dp"
-                android:drawableTop="@drawable/quote_icon"
-                android:drawablePadding="10dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/white">
+
+        </EditText>
+
+        <CheckBox
+            android:id="@+id/is2020"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signUp_quote"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="30dp"
+
+            android:text="Are you in the Graduating Class of 2020?"
+            android:textSize="18dp"
+            android:buttonTint="@color/Secondary"
+
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:textColor="@color/white"/>
 
 
     </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/signUp3_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:clickable="true"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:textSize="22dp"
+        app:initialCornerAngle="50dp"
+
+        android:textColor="#FFFF"
+        android:background="@drawable/round_button"
+        app:spinning_bar_width="3dp"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp"
+        />
+    </LinearLayout>
 </RelativeLayout>

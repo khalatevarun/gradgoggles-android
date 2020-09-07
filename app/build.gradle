@@ -10,11 +10,12 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.example.android.a2020"
-        minSdkVersion 16
+        applicationId 'com.team.gradgoggles.android'
+        minSdkVersion 28
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName '0.5'
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -31,6 +32,11 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -42,7 +48,7 @@ dependencies {
     implementation 'com.jakewharton:butterknife:10.2.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
 
-    compile 'com.basgeekball:awesome-validation:2.0'
+    implementation 'com.basgeekball:awesome-validation:2.0'
 
     implementation("com.squareup.okhttp3:okhttp:4.8.0")
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
@@ -50,7 +56,22 @@ dependencies {
     // Optional, if you use support library fragments:
     debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
 
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'br.com.simplepass:loading-button-android:2.2.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    compile 'jp.wasabeef:picasso-transformations:2.2.1'
+
+    implementation 'com.intuit.ssp:ssp-android:1.0.5'
+    implementation 'com.intuit.sdp:sdp-android:1.0.5'
+
+
+
+
 
 
 

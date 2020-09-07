@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".EditDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rootLayout"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/edit_details"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/profile_pic"
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/edit_profile_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/empty_profile"
+                        android:scaleType="centerCrop"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/myTextInputLabel2"
+                    android:layout_margin="20dp"
+
+
+
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_email"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:textColor="@color/black"
+
+                        android:paddingLeft="5dp"
+
+                        android:inputType="text"
+                        android:textSize="20dp"
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/myTextInputLabel2"
+                    android:layout_margin="20dp"
+
+
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_fullname"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Full Name"
+                        android:textColor="@color/black"
+
+                        android:paddingLeft="5dp"
+                        android:textSize="20dp"
+
+
+                        android:inputType="text"
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/edit_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/department_icon"
+                    android:spinnerMode="dropdown"
+
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"/>
+                <View
+                    android:id="@+id/spinner_underline"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginRight="22dp"
+                    android:foregroundGravity="center"
+                    android:layout_gravity="center"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_marginBottom="20dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:theme="@style/myTextInputLabel2"
+
+
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/subtle_text"
+                    android:textSize="20dp"
+                    android:hint="Date of birth"
+
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/myTextInputLabel2"
+                    android:layout_margin="20dp"
+                    android:id="@+id/edit_quote_parent"
+
+
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_quote"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Quote"
+                        android:textColor="@color/black"
+
+                        android:paddingLeft="5dp"
+                        android:textSize="20dp"
+
+
+                        android:inputType="text"
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/save_edit"
+
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:clickable="true"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:textSize="22dp"
+                    app:initialCornerAngle="50dp"
+
+
+                    android:textColor="#FFFF"
+                    android:background="@drawable/round_button"
+                    app:spinning_bar_width="3dp"
+                    app:spinning_bar_color="#FFF"
+                    app:spinning_bar_padding="6dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"/>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/gcaps"
+                android:id="@id/gcaps"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</FrameLayout>
+
+
+
+
+
+
+
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EditDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/edit_details"
+        android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="150dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/profile_pic"
+        >
+
+
+        <ImageView
+            android:id="@+id/edit_profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/empty_profile"
+            android:scaleType="centerCrop"/>
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/myTextInputLabel2"
+            android:layout_margin="20dp"
+
+
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_email"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textColor="@color/black"
+
+                android:paddingLeft="5dp"
+
+                android:inputType="text"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/myTextInputLabel2"
+            android:layout_margin="20dp"
+
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_fullname"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:textColor="@color/black"
+
+                android:paddingLeft="5dp"
+
+                android:inputType="text"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Spinner
+            android:id="@+id/edit_department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/department_icon"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"/>
+        <View
+            android:id="@+id/spinner_underline"
+            android:layout_width="366dp"
+            android:foregroundGravity="center"
+            android:layout_gravity="center"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginBottom="20dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:theme="@style/myTextInputLabel2"
+
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/subtle_text"
+            android:textSize="24dp"
+            android:hint="Date of birth"
+
+         />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/myTextInputLabel2"
+            android:layout_margin="20dp"
+
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_quote"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Quote"
+                android:textColor="@color/black"
+
+                android:paddingLeft="5dp"
+
+                android:inputType="text"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/save_edit"
+
+            android:text="Save"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:textSize="22dp"
+            app:initialCornerAngle="50dp"
+
+
+            android:textColor="#FFFF"
+            android:background="@drawable/round_button"
+            app:spinning_bar_width="3dp"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_padding="6dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"/>
+
+
+    </LinearLayout>
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:src="@drawable/gcaps"
+             android:id="@id/gcaps"/>
+     </RelativeLayout>
+    </ScrollView>
+
+
+</FrameLayout>
+
+-->
