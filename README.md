@@ -23,4 +23,13 @@ Gradgoggles is a cross-platform virtual yearbook and scrapbook application devel
 
 ---
 
+### Android App Screenshots
+
+Following is a sneak peek of how the interface looks. To use the app live, head on over to [Google Play Store](https://play.google.com/store/apps/details?id=com.team.android.gradgoggles&hl=en)
+
+| Profile                               | Yearbook                             | Auth Screens                               | Scraps                             |
+| ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | 
+| ![](https://assets.rajrajhans.com/gg4_1.png) | ![](https://assets.rajrajhans.com/gg5_1.png) | ![](https://assets.rajrajhans.com/gg6_1.png) | ![](https://assets.rajrajhans.com/gg7_1.png) |
+
+
 This repo contains source code for GradGoggles Android application. For more details and source code for API and Android, check out [this repository](https://github.com/rajrajhans/gradgoggles).   
